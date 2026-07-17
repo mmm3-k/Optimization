@@ -2,9 +2,9 @@
 
 This repository contains a MATLAB script that implements and solves a constrained **Non-Linear Programming** (NLP) optimization problem using the **CasADi** framework and the **IPOPT** solver.
 
-## Problem Description
+## Problem 1: Distance Minimization to a Plane
 
-The objective is to find a 3-dimensional vector $x = [x_1, x_2, x_3]^T$ that minimizes the squared distance from the origin (the squared Euclidean norm) while strictly satisfying a linear plane constraint. 
+The objective is to find a 3-dimensional vector $x = [x_1, x_2, x_3]^T$ that minimizes the squared distance from the origin (the squared Euclidean norm) while strictly satisfying a linear plane constraint.
 
 ### Mathematical Formulation
 
@@ -15,7 +15,7 @@ $$
 \end{aligned}
 $$
 
-* **Decision Variables**: $x_1, x_2, x_3 \in \mathbb{R}$ (unbounded internally with lower/upper bounds set to $\pm\infty$).
+* **Decision Variables**: $x_1, x_2, x_3 \in \mathbb{R}$ (with lower/upper bounds set to $\pm\infty$).
 * **Objective Function**: Minimize $f(x)$, representing the sum of squares of the decision variables.
 * **Constraints**: A single linear equality constraint ($g(x) = 10$) enforced by setting both the lower bound (`lbg`) and upper bound (`ubg`) of the constraint function to 10.
 
