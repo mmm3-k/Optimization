@@ -31,8 +31,8 @@ solver = nlpsol('solver','ipopt',nlp,opts);
 sol = solver('x0',x0bar,'lbx', lbx, 'ubx', ubx, 'lbg', ubg,'ubg', lbg);
 
 %Optimal X values are
-x_sol = full(sol.x);
+x_sol = full(sol.x)
 
 %Optimal Objective value is 
-min_value = full(sol.f);
+min_value = full(sol.f)
 
