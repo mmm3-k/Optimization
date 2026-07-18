@@ -2,10 +2,10 @@ clear all; clear; clc;
 import casadi.*;
 
 %Create symbolic variables
-x = SX.sym('x',3);
+x = SX.sym('x',2;
 
 % Initial condition
-x0bar = [0; 0; 0];
+x0bar = [0; 0];
 
 %Objective
 L = @(x) (x(1) - 3)^2 + (x(2)-2)^2 ;
@@ -16,7 +16,7 @@ g = [x(1)^2 - x(2) -3; x(2)-1];
 decision_variable = x;
 
 %Create NLP solver
-nlp = struct('x',decision_variable,'f',obj,,'g',g);
+nlp = struct('x',decision_variable,'f',obj,'g',g);
 opts = struct;
 opts.ipopt.max_iter = 1000;
 opts.ipopt.print_level = 0;
